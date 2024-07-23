@@ -1,0 +1,904 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #121212;
+}
+
+/* navigation bar */
+
+/* nav up */
+
+nav{
+    position: fixed;
+    right: 0rem;
+    left: 0rem;
+    top: 0rem;
+    background-color: #121212;
+    z-index: 1;
+}
+
+.navup{
+    height: 3rem;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    display: flex;
+}
+
+/* nav up left */
+
+.navup-left{
+    width: 30%;
+    height: 100%;
+    padding-left: 6.6rem;
+}
+
+.navup-left>ul{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.navup-left>ul>a>li{
+    list-style: none;
+}
+
+.navup-left>ul>a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.navup-left>ul>:nth-child(1){
+    border-right: 1px solid gray;
+    padding-right: 1rem;
+}
+
+.navup-left>ul>:nth-child(2){
+    border-right: 1px solid gray;
+    padding-right: 1rem;
+}
+
+.navup-left>ul>:nth-child(3){
+    border-right: 1px solid gray;
+    padding-right: 1rem;
+}
+
+    li{
+        position: relative;
+    }
+    
+    li::before{
+        content: "";
+        border-bottom: 2px solid #00c09a;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform: scaleX(0);
+        transition: transform 0.5s ease;
+        transform-origin: left;
+    }
+    
+    li:hover::before{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    li:hover{
+        color: #00c09a;
+        transition: 0.5s ease;
+    }
+
+/* /nav up left */
+
+/* nav up center */
+
+.navup-center{
+    width: 55%;
+    height: 100%;
+}
+
+.navup-center>ul{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.navup-center>ul>a>li{
+    list-style: none;
+    font-size: 1.1rem;
+    font-weight: lighter;
+}
+
+.navup-center>ul>a{
+    text-decoration: none;
+    color: white;
+}
+
+/* /nav up center */
+
+/* navup-right */
+
+.navup-right{
+    height: 100%;
+    width: 15%;
+    padding-right: 6.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navup-right>img{
+    height: 1.7rem;
+    width: 1.9rem;
+}
+
+.navup-right>i{
+    color: #00c09a;
+    font-size: 1.4rem;
+}
+
+.navup-right>.fa-sun{
+    color: white;
+}
+
+.fa-sun{
+    transition: 0.5s ease-in-out;
+}
+
+.fa-sun:hover{
+    color: #00c09a;
+}
+
+/* /nav up right */
+
+/* nav down */
+
+.navdown{
+    height: 5.5rem;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    display: flex;
+}
+
+/* nav down left */
+
+.navdown-left{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 9rem;
+}
+
+
+.navdown>.navdown-left>img{
+    width: 6rem;
+    height: 2rem;
+}
+
+/* /nav down left */
+
+/* nav down center */
+
+.navdown-center{
+    width: 60%;
+    height: 100%;
+}
+
+.navdown-center>ul{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    gap: 1.7rem;
+}
+
+.navdown-center>ul>a>li{
+    list-style: none;
+    font-size: 1.1rem;
+    font-weight: lighter;
+}
+
+.navdown-center>ul>a{
+    text-decoration: none;
+    color: white;
+}
+
+/* /nav down center */
+
+/* nav down right */
+
+.navdown-right{
+    height: 100%;
+    width: 30%;
+    padding-right: 6.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.navdown-right>i{
+    color: white;
+    font-size: 2.6rem;
+    transition: 0.5s ease-in-out;
+}
+
+button{
+    width: 10.4rem;
+    height: 3.8rem;
+    background-color: #00c09a;
+    border: 1px solid #00c09a;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+.fa-microphone:hover, .fa-phone:hover, .fa-magnifying-glass:hover{
+    color: #00c09a;
+    transition: 0.5s ease;
+}
+
+button:hover{
+    background-color: transparent;
+    color: #00c09a;
+}
+
+/* /nav down right */
+
+/* /nav down */
+
+/* /navigation bar */
+
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
+
+/* main content */
+
+/* inspire section */
+
+.inspire{
+    display: flex;
+    align-items: center;
+    gap: 12rem;
+    margin: 2rem 6.6rem;
+    padding-top: 9rem;
+}
+
+.inspireleft{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.inspireleft>h1{
+font-size: 2.7rem;
+color: #00c09a;
+border-bottom: 1px solid gray;
+padding-bottom: 0.5rem;
+}
+
+.inspireleft>h5{
+    font-size: 3rem;
+    color: white;
+    font-weight: 100;
+}
+
+.inspireright>img{
+    width: 50rem;
+    height: 45rem;
+}
+
+/* /inspire section */
+
+/* block section */
+
+.block{
+    margin: 8rem 6.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.blocktext{
+    border: 1px solid gray;
+    width: 17.5rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    padding: 0rem 1.5rem;
+}
+
+.blocktext:hover{
+    background-color: #00c09a;
+}
+
+.blocktext>h1{
+    font-size: 1.4rem;
+    padding-left: 1rem;
+}
+
+.blocktext>img{
+    min-height: 5rem;
+    min-width: 5rem;
+    padding-bottom: 3rem;
+}
+
+
+
+/* /block section */
+
+/* konnect section */
+
+.konnect{
+    margin: 10rem 6.6rem; 
+}
+
+/* konnect top */
+
+.konnecttop{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+}
+
+.konnecttop>h1{
+    color: #00c09a;
+    font-size: 2rem;
+}
+
+.konnecttop>h5{
+    color: white;
+    font-size: 4.8rem;
+    font-weight: 100;
+    line-height: 6rem;
+}
+
+.konnecttop>.go{
+    border-bottom: 1px solid gray;
+}
+
+.konnecttext{
+    display: flex;
+    gap: 4rem;
+}
+
+.konnecttext>.nct, .mobile{
+    font-size: 2rem;
+    color: #00c09a;
+    border-bottom: 2px solid #00c09a;
+}
+
+.konnecttext>.nct{
+    color: white;
+    border-bottom: 1px solid gray;
+}
+
+/* /konnect top section */
+
+.konnectbottom{
+    display: flex;
+    gap: 27rem;
+    padding-top: 3rem;
+}
+
+.konnectleft>img{
+    width: 47rem;
+    height: 34rem;
+}
+
+.konnectright{
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    padding-top: 2rem;
+}
+
+.konnectright>h1{
+    font-size: 2.7rem;
+    color: #00c09a;
+    border-bottom: 1px solid gray;
+}
+
+.konnectright>h5{
+    font-size: 3rem;
+    color: white;
+    font-weight: 100;
+    line-height: 3.9rem;
+}
+
+.downloadnow{
+    height: 3.5rem;
+    width: 15rem;
+}
+
+/* /konnect section */
+
+/* deals and discounts */
+
+.dd{
+    margin: 10rem 6.6rem;
+}
+  
+/* dd top */
+
+.ddtop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+}
+
+.ddtop>h1{
+    font-size: 2.2rem;
+    color: #00c09a;
+    border-bottom: 1px solid gray;
+}
+
+.ddtop>h5{
+    font-size: 4.9rem;
+    font-weight: 100;
+    color: white;
+}
+
+/* /dd top */
+
+.ddbottom{
+    display: flex;
+    margin-top: 5rem;
+    gap: 11.5rem;
+}
+
+.ddleft{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 2.5rem;
+}
+
+.ddleft>.moredetails{
+    width: 15rem;
+    height: 3.5rem;
+}
+
+.ddleft>h5{
+    font-size: 3.3rem;
+    font-weight: 100;
+    color: white;
+    line-height: 4rem;
+}
+
+.ddright{
+    display: flex;
+    gap: 2.5rem;
+    border-bottom: 3px solid gray;
+    padding-bottom: 3rem;
+}
+
+.ddright>.aga, .daraz{
+    width: 36rem;
+    height: 46.4rem;
+}
+
+.aga{
+    background-image: url("https://www.hbl.com/assets/home-webp-dark/Aga-khan-new-1.webp");
+    background-size: cover;
+}
+
+.daraz{
+    background-image: url("https://www.hbl.com/assets/home-webp-dark/image_2021_02_02T12_28_53_363Z.webp");
+    background-size: cover;
+}
+
+.ddright>.aga, .daraz{
+    border-bottom: 3px solid #00c09a;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-left: 1.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.aga>h1, .daraz>h1{
+    color: white;
+    font-size: 2.7rem;
+    font-weight: 100;
+}
+
+.aga>h5, .daraz>h5{
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 100;
+}
+
+/* /deals and discounts */
+
+/* credit cards */
+
+.card{
+    display: flex;
+    flex-direction: column;
+    margin: 10rem 6.6rem;
+}
+
+.card>h5{
+    color: white;
+    font-size: 4.8rem;
+    font-weight: 100;
+    text-align: center;
+    line-height: 5.5rem;
+}
+
+.credit{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
+}
+
+.credit>h1{
+    font-size: 1.6rem;
+    color: #00c09a;
+    border-bottom: 2px solid #00c09a;
+    padding-top: 4.5rem;
+}
+
+.credit>.whitedebit{
+    color: white;
+    border-bottom: 1px solid gray;
+}
+
+.visa{
+    display: flex;
+    padding-top: 8rem;
+    border-bottom: 3px solid #00c09a;
+    padding-bottom: 3rem;
+}
+
+.master{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 0rem 5rem;
+}
+
+/* /credit cards */
+
+/* grid section */
+
+.grid{
+    margin: 8rem 6.6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* grid up */
+
+.gridup>h5{
+    color: white;
+    font-size: 4.8rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+.gridup{
+    padding-bottom: 8rem;
+}
+
+/* grid down */
+
+.griddown{
+    display: grid;
+    height: 47rem;
+    grid-template-rows: 10rem 10rem;
+    grid-template-columns: 23% 23% 23% 23%;
+    gap: 2.88rem;
+}
+
+/* box 1 */
+.box1{
+    grid-row: 1/3;
+    background-image: url("https://www.hbl.com/assets/home-webp/image_2021_02_01T13_03_28_393Z.webp");
+    background-size: cover;
+    text-align: center;
+}
+
+.box1>h1{
+    padding-top: 4rem;
+    font-size: 2.4rem;
+    font-weight: 100;
+}
+
+.box1>h5{
+    font-size: 1.4rem;
+    font-weight: 100;
+    color: rgb(26, 23, 23);
+    padding-top: 2rem;
+}
+
+.box1>button{
+    margin-top: 6rem;
+    width: 11.5rem;
+    height: 3.5rem;
+}
+
+/* box 2 */
+.box2{
+    grid-row: 1/3;
+    grid-column: 2;
+    background-image: url("https://www.hbl.com/assets/home-webp/bankassurance.webp");
+    background-size: cover;
+    text-align: center;
+}
+
+.box2>h1{
+    padding-top: 4rem;
+    font-size: 2.4rem;
+    font-weight: 100;
+    color: white;
+}
+
+.box2>h5{
+    font-size: 1.4rem;
+    font-weight: 100;
+    color: white;
+    padding-top: 2rem;
+}
+
+.box2>button{
+    margin-top: 6rem;
+    width: 11.5rem;
+    height: 3.5rem;
+}
+
+/* box 3 */
+.box3{
+    grid-row: 1/4;
+    grid-column: 3;
+    background-image: url("https://www.hbl.com/assets/home-webp/HBL-Roshan-Apna-Ghar.webp");
+    background-size: cover;
+    text-align: center;
+}
+
+.box3>h1{
+    padding-top: 4rem;
+    font-size: 2.4rem;
+    font-weight: 100;
+}
+
+.box3>h5{
+    font-size: 1.4rem;
+    font-weight: 100;
+    color: rgb(26, 23, 23);
+    padding-top: 2rem;
+}
+
+.box3>button{
+    margin-top: 27rem;
+    width: 11.5rem;
+    height: 3.5rem;
+}
+
+/* box 4 */
+.box4{
+    grid-row: 1/4;
+    grid-column: 4;
+    background-image: url("https://www.hbl.com/assets/home-webp/hbl-nisa.webp");
+    background-size: cover;
+    text-align: center;
+}
+
+.box4>h1{
+    padding-top: 4rem;
+    font-size: 2.4rem;
+    font-weight: 100;
+}
+
+.box4>h5{
+    font-size: 1.4rem;
+    font-weight: 100;
+    color: rgb(26, 23, 23);
+    padding-top: 2rem;
+}
+
+.box4>button{
+    margin-top: 30rem;
+    width: 11.5rem;
+    height: 3.5rem;
+}
+
+/* box 5 */
+.box5{
+    grid-column: 1/3;
+    background-image: url("https://www.hbl.com/assets/home-webp/image_2021_07_14T07_41_41_616Z.webp");
+    background-size: cover;
+    text-align: center;
+}
+
+.box5>h1{
+    padding-top: 4rem;
+    font-size: 2.4rem;
+    font-weight: 100;
+}
+
+.box5>h5{
+    font-size: 1.4rem;
+    font-weight: 100;
+    color: rgb(26, 23, 23);
+    padding-top: 1rem;
+}
+
+.box5>button{
+    margin-top: 6rem;
+    width: 11.5rem;
+    height: 3.5rem;
+}
+
+.griddown>.box>:hover.gridbtn{
+    background-color: #121212;
+}
+
+/* /grid section */
+
+/* anchor section */
+
+.anchor{
+    margin: 12rem 6.6rem;
+    margin-bottom: 4.5rem;
+}
+
+/* anchor up */
+.anchorup>h5{
+    color: white;
+    font-size: 4.8rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+/* anchor down */
+
+.anchordown{
+    display: flex;
+    gap: 16.5rem;
+    text-align: center;
+    margin: 4rem 6.6rem;
+}
+
+.news{
+    display: flex;
+    flex-direction: column;
+}
+
+.news>img{
+    width: 5rem;
+    height: 7.5rem;
+}
+
+.news>h5{
+    color: gray;
+    font-size: 1.4rem;
+    font-weight: 100;
+}
+
+/* /anchor section */
+
+/* /main content */
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+/* footer section */
+
+/* foot up */
+
+.footup{
+    display: flex;
+    padding: 8rem 6.6rem;
+    justify-content: space-evenly;
+    border-top: 1px solid gray;
+}
+
+.footup>.col>.bot>ul>a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.footup>.col>.bot>ul>a>li{
+    list-style: none;
+    width: max-content;
+}
+
+.footup>.col>h1{
+    color: #00c09a;
+    font-size: 1.3rem;
+    padding-bottom: 1.5rem;
+}
+
+.footup>.col>.bot>ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footup>.col4>.bot>form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footup>.col4>.bot>form>input{
+    background-color: #121212;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+/* footer center */
+
+.footcenter{
+    padding: 1rem 19rem;
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footcenterleft>h1{
+    font-size: 1.3rem;
+    color: white;
+}
+
+.followus>img{
+    width: 3.4rem;
+    height: 3.4rem;
+}
+
+.footcenterright>button{
+    width: 15.6rem;
+}
+
+.footcenterleft{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.followus{
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* footer down */
+
+.footdown{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.3rem 12rem;
+    border-top: 1px solid gray;
+}
+
+.footdownleft>p, .footdownright>p{
+    font-size: 1.4rem;
+    color: white;
+}
+
+/* /footer section */
